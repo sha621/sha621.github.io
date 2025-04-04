@@ -21,7 +21,7 @@ title                    : "Sophie's Personal Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Sophie Ha"
-description              : "Personal Blog."
+description              : "Personal Blog"
 url                      : "https://sha621.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
