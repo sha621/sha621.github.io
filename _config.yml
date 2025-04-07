@@ -18,8 +18,8 @@ minimal_mistakes_skin    : "contrast" # "default", "air", "aqua", "contrast", "d
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
 title                    : "Sophie's Personal Blog"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+title_separator          : "|"
+subtitle                 : "Supportive environment"
 name                     : "Sophie Ha"
 description              : "Personal Blog"
 url                      : "https://sha621.github.io"
