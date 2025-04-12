@@ -6,6 +6,10 @@ main:
     url: /categories/
   - title: "Tag"
     url: /tags/
+  - title: "Recipe"
+    url: /recipes/
+  - title: "Book"
+    url: /books/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
