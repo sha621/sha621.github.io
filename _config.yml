@@ -316,3 +316,11 @@ defaults:
       share: true
       related: true
       show_date: true
+
+
+# Block of codes added to add Book and Recipe section as pages
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
