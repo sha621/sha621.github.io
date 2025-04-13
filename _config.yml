@@ -324,4 +324,13 @@ collections:
   pages:
     output: true
     permalink: /:path/
+  # recipes:
+  #   output: true
+  #   permalink: /recipes/:title/
+  #   layout: single
+  # books:
+  #   output: true
+  #   permalink: /books/:title/
+  #   layout: single
+
 
