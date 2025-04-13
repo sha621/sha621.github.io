@@ -281,17 +281,29 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+recipe_archive:
+  type: liquid
+  path: /recipes/
+book_archive:
+  type: liquid
+  path: /books/
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
   enabled:
     - categories
     - tags
+    - recipes
+    - books
   layouts:
     category: archive-taxonomy
     tag: archive-taxonomy
+    recipe: archive-taxonomy
+    book: archive-taxonomy
   permalinks:
     category: /categories/:name/
     tag: /tags/:name/
+    recipe: /recipes/:name/
+    book: /books/:name/
 
 
 # HTML Compression
