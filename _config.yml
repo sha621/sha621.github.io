@@ -283,16 +283,19 @@ jekyll-archives:
     - tags
     - recipes
     - books
+    - blogs
   layouts:
     category: archive-taxonomy
     tag: archive-taxonomy
     recipe: archive-taxonomy
     book: archive-taxonomy
+    blog: archive-taxonomy
   permalinks:
     category: /categories/:name/
     tag: /tags/:name/
     recipe: /recipes/:name/
     book: /books/:name/
+    blog: /blogs/:name/
 
 
 # HTML Compression
@@ -332,5 +335,8 @@ collections:
   #   output: true
   #   permalink: /books/:title/
   #   layout: single
-
+  # blogs:
+  #   output: true
+  #   permalink: /blogs/:title/
+  #   layout: single
 
