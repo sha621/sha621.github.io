@@ -276,6 +276,9 @@ recipe_archive:
 book_archive:
   type: liquid
   path: /books/
+blog_archive:
+  type: liquid
+  path: /blogs/
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
   enabled:
