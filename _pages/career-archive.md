@@ -1,5 +1,5 @@
 ---
-title: "Career Corner"
+title: "Career"
 layout: careers
 permalink: /careers/
 author_profile: true

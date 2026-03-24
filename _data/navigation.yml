@@ -12,7 +12,7 @@ main:
     url: /books/
   - title: "Blog"
     url: /blogs/
-  - title: "Career Corner"
+  - title: "Career"
     url: /careers/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
