@@ -279,6 +279,9 @@ book_archive:
 blog_archive:
   type: liquid
   path: /blogs/
+career_archive:
+  type: liquid
+  path: /careers/
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
   enabled:
@@ -287,18 +290,21 @@ jekyll-archives:
     - recipes
     - books
     - blogs
+    - careers
   layouts:
     # category: archive-taxonomy
     # tag: archive-taxonomy
     recipe: archive-taxonomy
     book: archive-taxonomy
     blog: archive-taxonomy
+    career: archive-taxonomy
   permalinks:
     # category: /categories/:name/
     # tag: /tags/:name/
     recipe: /recipes/:name/
     book: /books/:name/
     blog: /blogs/:name/
+    career: /careers/:name/
 
 
 # HTML Compression
@@ -323,6 +329,46 @@ defaults:
       share: true
       related: true
       show_date: true
+  # _blogs
+  - scope:
+      path: ""
+      type: blogs
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      show_date: true
+  # _recipes
+  - scope:
+      path: ""
+      type: recipes
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      show_date: true
+  # _books
+  - scope:
+      path: ""
+      type: books
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      show_date: true
+  # _careers
+  - scope:
+      path: ""
+      type: careers
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      show_date: true
 
 
 # Block of codes added to add Book and Recipe section as pages
@@ -330,16 +376,19 @@ collections:
   pages:
     output: true
     permalink: /:path/
-  # recipes:
-  #   output: true
-  #   permalink: /recipes/:title/
-  #   layout: single
-  # books:
-  #   output: true
-  #   permalink: /books/:title/
-  #   layout: single
-  # blogs:
-  #   output: true
-  #   permalink: /blogs/:title/
-  #   layout: single
+  recipes:
+    output: true
+    permalink: /recipes/:title/
+    # layout: single
+  books:
+    output: true
+    permalink: /books/:title/
+    # layout: single
+  blogs:
+    output: true
+    permalink: /blogs/:title/
+    # layout: single
+  careers:
+    output: true
+    permalink: /careers/:title/
 

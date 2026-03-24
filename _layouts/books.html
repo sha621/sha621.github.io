@@ -4,4 +4,7 @@ layout: archive
 
 {{ content }}
 
-{% include posts-taxonomy.html taxonomies=site.books %}
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include documents-collection.html collection="books" sort_by="date" sort_order="reverse" type=entries_layout %}
+</div>
