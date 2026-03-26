@@ -5,6 +5,34 @@ layout: archive
 {{ content }}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% include documents-collection.html collection="recipes" sort_by="date" sort_order="reverse" type=entries_layout %}
+{% assign subcategories = "Food,Baking" | split: "," %}
+
+<div class="category-nav">
+  {% for subcategory in subcategories %}
+    <a href="#{{ subcategory | slugify }}" class="btn btn--primary btn--small">{{ subcategory }}</a>
+  {% endfor %}
 </div>
+
+<hr>
+
+{% assign all_items = site.recipes | where_exp: "post", "post.hidden != true" | sort: "date" | reverse %}
+<h2 class="archive__subtitle">Recent Posts</h2>
+<div class="entries-{{ entries_layout }}">
+  {% for post in all_items limit: 5 %}
+    {% include archive-single.html type=entries_layout %}
+  {% endfor %}
+</div>
+
+<hr>
+
+{% for subcategory in subcategories %}
+  {% assign items = site.recipes | where: "category", subcategory | where_exp: "post", "post.hidden != true" | sort: "date" | reverse %}
+  {% if items.size > 0 %}
+    <h2 class="archive__subtitle" id="{{ subcategory | slugify }}">{{ subcategory }}</h2>
+    <div class="entries-{{ entries_layout }}">
+      {% for post in items %}
+        {% include archive-single.html type=entries_layout %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endfor %}
